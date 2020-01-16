@@ -1,0 +1,28 @@
+	AREA	RESET,	CODE
+		ENTRY
+		LDR R0,=N
+		LDR R7,[R0]
+		LDR R1,=NUMS
+		MOV R3,#0  ;SUM
+		
+CONT
+		LDR R6,[R1]
+		ADD R3,R6
+		ADD R1,#4
+		SUBS R7,#1
+		CMP R7,#0
+		BNE CONT
+		
+		MOV R4,R3
+		MOV R5,#0
+		LDR R7,[R0]
+		
+LBL
+		SUBS R4,R7
+		ADDCS R5,#1
+		BCS LBL
+STOP B STOP
+N DCD &4
+NUMS DCD &1,&2,&3,&4
+
+	END;sum is in R3 and average is in R5 
