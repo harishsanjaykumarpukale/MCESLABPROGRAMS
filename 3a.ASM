@@ -1,0 +1,32 @@
+  AREA	RESET, CODE
+		ENTRY
+		LDR R0,=N
+		LDR R1,[R0]
+		LDR R0,=NUMS
+		MOV R3,#0
+		
+CONT 	
+		LDR R2,[R0]
+		ADD R3,R2
+		ADD R0,#4
+		SUBS R1,#1
+		BNE CONT
+		
+		MOV R4,R3
+		MOV R5,#0
+		LDR R0,=N
+		LDR R1,[R0]
+		
+LBL 
+		SUBS R4,R1
+		ADDCS R5,#1
+		BCS	LBL
+		
+		LDR R0,=RES
+		STR R5,[R0]
+STOP B STOP
+N DCD &9
+NUMS DCD &1,&2,&3,&4,&5,&6,&7,&8,&9
+	AREA	RESET,	DATA
+RES SPACE 4
+	END
