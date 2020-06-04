@@ -8,7 +8,7 @@
 		MOV R1,#2
 		MOV R2,#3
 		MOV R3,#4
-		MUL R4,R1,R1
+		MUL R4,R1,R1 ;MUL R1 , R2 , R3 - Multiply R1 <- R2 x R3
 		MUL R0,R4,R1
 		MUL R4,R2,R2
 		MLA R0,R4,R2,R0
