@@ -1,5 +1,6 @@
 # 1A
 
+## $n^2$
 ## A = B+C-D
 
 ```ASSEMBLY
