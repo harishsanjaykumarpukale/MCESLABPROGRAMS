@@ -1,0 +1,17 @@
+# 1A
+
+## A = B+C-D
+
+```ASSEMBLY
+	AREA	RESET, CODE
+		ENTRY
+		
+		MOV R1,#4
+		MOV R2,#5
+		MOV R3,#2
+		
+		ADD R0,R1,R2
+		SUB R0,R0,R3
+STOP B STOP
+		END
+```
