@@ -1,6 +1,24 @@
 # 1A
 
 ## S = A<sup>3</sup> + B<sup>3</sup> +C<sup>3</sup> 
+```ASSEMBLY
+	AREA	RESET, CODE
+		ENTRY
+		
+		MOV R1,#2
+		MOV R2,#3
+		MOV R3,#4
+		MUL R4,R1,R1
+		MUL R0,R4,R1
+		MUL R4,R2,R2
+		MLA R0,R4,R2,R0
+		MUL R4,R3,R3
+		MLA R0,R4,R3,R0
+STOP B STOP
+		END
+		
+```
+
 ## A = B+C-D
 
 ```ASSEMBLY
