@@ -49,3 +49,23 @@ STOP B STOP
 STOP B STOP
 		END
 ```
+### OR
+### USING MUL R1 , R2 , R3 - Multiply R1 <- R2 x R3
+### MLA R4 , R3 , R2 , R1 - Multiply and Accumulate; R4 <- (R3 x R2) + R1
+
+```ASSEMBLY
+	AREA	RESET, CODE
+		ENTRY
+		
+		MOV R1,#2
+		MOV R2,#3
+		MOV R3,#4
+		MOV R4,#3
+		MOV R5,#4
+		MOV R6,#9
+		MUL R0,R1,R4 
+		MLA R0,R2,R5,R0
+		MLA R0,R3,R6,R0
+STOP B STOP
+		END
+```
