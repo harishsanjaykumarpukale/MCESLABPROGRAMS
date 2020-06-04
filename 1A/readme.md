@@ -31,3 +31,21 @@ STOP B STOP
 STOP B STOP
 		END
 ```
+
+
+## S = 3X + 4Y + 9Z, where X = 2, Y=3 and Z=4
+
+```
+	AREA	RESET, CODE
+		ENTRY
+		
+		MOV R1,#2
+		MOV R2,#3
+		MOV R3,#4
+		ADD R0,R1,R1,LSL #1 ; 
+		ADD R0,R0,R2,LSL #2
+		ADD R3,R3,R3,LSL #3 
+		ADD R0,R3
+STOP B STOP
+		END
+```
