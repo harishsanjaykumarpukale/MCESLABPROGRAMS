@@ -1,6 +1,6 @@
 # 1A
 
-## n^2
+## S = A<sup>3</sup> + B<sup>3</sup> +C<sup>3</sup> 
 ## A = B+C-D
 
 ```ASSEMBLY
