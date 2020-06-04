@@ -35,7 +35,7 @@ STOP B STOP
 
 ## S = 3X + 4Y + 9Z, where X = 2, Y=3 and Z=4
 
-```
+```ASSEMBLY
 	AREA	RESET, CODE
 		ENTRY
 		
