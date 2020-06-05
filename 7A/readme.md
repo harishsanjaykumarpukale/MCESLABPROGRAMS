@@ -1,0 +1,43 @@
+# Bubble Sort
+
+```ASSEMBLY
+	AREA	RESET,	CODE
+		ENTRY
+		LDR	R0,=VALUES
+		LDMIA R0,{R1-R10}
+		MOV SP,#0X40000000
+		STMIA SP,{R1-R10}
+		
+		
+		MOV R0,#0X40000000
+		
+		MOV R1,#9
+		MOV R2,#9
+LOOP1			
+		MOV R3,R0
+		MOV R10,R2
+LOOP2		
+		LDR R4,[R3]
+		LDR R5,[R3,#4]
+		
+		CMP R4,R5
+		
+		BLT DONTSWAP
+		
+		STR R4,[R3,#4]
+		STR R5,[R3]
+		
+DONTSWAP
+		ADD R3,#4
+		SUBS R10,#1
+		BNE LOOP2
+		
+		SUB R2,#1
+		SUBS R1,#1
+		BNE LOOP1
+		
+STOP	B	STOP
+	AREA	DATA,	CODE
+VALUES DCD &9,&8,&7,&6,&5,&4,&3,&2,&1,&A
+		END
+```
